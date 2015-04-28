@@ -1,0 +1,429 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EC1F1CE91AEF97D10071A7EC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1F1CE81AEF97D10071A7EC /* main.m */; };
+		EC1F1CEC1AEF97D10071A7EC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1F1CEB1AEF97D10071A7EC /* AppDelegate.m */; };
+		EC1F1CF41AEF97D10071A7EC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC1F1CF31AEF97D10071A7EC /* Images.xcassets */; };
+		EC1F1CF71AEF97D10071A7EC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC1F1CF51AEF97D10071A7EC /* LaunchScreen.xib */; };
+		EC1F1D031AEF97D10071A7EC /* QHSpeechSynthesizerQueueTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1F1D021AEF97D10071A7EC /* QHSpeechSynthesizerQueueTests.m */; };
+		EC1F1D0F1AEF980B0071A7EC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1F1D0D1AEF980B0071A7EC /* ViewController.m */; };
+		EC1F1D101AEF980B0071A7EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC1F1D0E1AEF980B0071A7EC /* Main.storyboard */; };
+		EC1F1D131AEF984C0071A7EC /* QHSpeechSynthesizerQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1F1D121AEF984C0071A7EC /* QHSpeechSynthesizerQueue.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EC1F1CFD1AEF97D10071A7EC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EC1F1CDB1AEF97D10071A7EC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EC1F1CE21AEF97D10071A7EC;
+			remoteInfo = QHSpeechSynthesizerQueue;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EC1F1CE31AEF97D10071A7EC /* QHSpeechSynthesizerQueue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QHSpeechSynthesizerQueue.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC1F1CE71AEF97D10071A7EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC1F1CE81AEF97D10071A7EC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EC1F1CEA1AEF97D10071A7EC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EC1F1CEB1AEF97D10071A7EC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EC1F1CF31AEF97D10071A7EC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		EC1F1CF61AEF97D10071A7EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		EC1F1CFC1AEF97D10071A7EC /* QHSpeechSynthesizerQueueTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QHSpeechSynthesizerQueueTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC1F1D011AEF97D10071A7EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC1F1D021AEF97D10071A7EC /* QHSpeechSynthesizerQueueTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QHSpeechSynthesizerQueueTests.m; sourceTree = "<group>"; };
+		EC1F1D0C1AEF980B0071A7EC /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		EC1F1D0D1AEF980B0071A7EC /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		EC1F1D0E1AEF980B0071A7EC /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		EC1F1D111AEF984C0071A7EC /* QHSpeechSynthesizerQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHSpeechSynthesizerQueue.h; sourceTree = "<group>"; };
+		EC1F1D121AEF984C0071A7EC /* QHSpeechSynthesizerQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHSpeechSynthesizerQueue.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EC1F1CE01AEF97D10071A7EC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC1F1CF91AEF97D10071A7EC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EC1F1CDA1AEF97D10071A7EC = {
+			isa = PBXGroup;
+			children = (
+				EC1F1CE51AEF97D10071A7EC /* QHSpeechSynthesizerQueue */,
+				EC1F1CFF1AEF97D10071A7EC /* QHSpeechSynthesizerQueueTests */,
+				EC1F1CE41AEF97D10071A7EC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EC1F1CE41AEF97D10071A7EC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EC1F1CE31AEF97D10071A7EC /* QHSpeechSynthesizerQueue.app */,
+				EC1F1CFC1AEF97D10071A7EC /* QHSpeechSynthesizerQueueTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EC1F1CE51AEF97D10071A7EC /* QHSpeechSynthesizerQueue */ = {
+			isa = PBXGroup;
+			children = (
+				EC1F1D111AEF984C0071A7EC /* QHSpeechSynthesizerQueue.h */,
+				EC1F1D121AEF984C0071A7EC /* QHSpeechSynthesizerQueue.m */,
+				EC1F1CEA1AEF97D10071A7EC /* AppDelegate.h */,
+				EC1F1CEB1AEF97D10071A7EC /* AppDelegate.m */,
+				EC1F1D0C1AEF980B0071A7EC /* ViewController.h */,
+				EC1F1D0D1AEF980B0071A7EC /* ViewController.m */,
+				EC1F1D0E1AEF980B0071A7EC /* Main.storyboard */,
+				EC1F1CF31AEF97D10071A7EC /* Images.xcassets */,
+				EC1F1CF51AEF97D10071A7EC /* LaunchScreen.xib */,
+				EC1F1CE61AEF97D10071A7EC /* Supporting Files */,
+			);
+			path = QHSpeechSynthesizerQueue;
+			sourceTree = "<group>";
+		};
+		EC1F1CE61AEF97D10071A7EC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EC1F1CE71AEF97D10071A7EC /* Info.plist */,
+				EC1F1CE81AEF97D10071A7EC /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EC1F1CFF1AEF97D10071A7EC /* QHSpeechSynthesizerQueueTests */ = {
+			isa = PBXGroup;
+			children = (
+				EC1F1D021AEF97D10071A7EC /* QHSpeechSynthesizerQueueTests.m */,
+				EC1F1D001AEF97D10071A7EC /* Supporting Files */,
+			);
+			path = QHSpeechSynthesizerQueueTests;
+			sourceTree = "<group>";
+		};
+		EC1F1D001AEF97D10071A7EC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EC1F1D011AEF97D10071A7EC /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EC1F1CE21AEF97D10071A7EC /* QHSpeechSynthesizerQueue */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC1F1D061AEF97D10071A7EC /* Build configuration list for PBXNativeTarget "QHSpeechSynthesizerQueue" */;
+			buildPhases = (
+				EC1F1CDF1AEF97D10071A7EC /* Sources */,
+				EC1F1CE01AEF97D10071A7EC /* Frameworks */,
+				EC1F1CE11AEF97D10071A7EC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QHSpeechSynthesizerQueue;
+			productName = QHSpeechSynthesizerQueue;
+			productReference = EC1F1CE31AEF97D10071A7EC /* QHSpeechSynthesizerQueue.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EC1F1CFB1AEF97D10071A7EC /* QHSpeechSynthesizerQueueTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC1F1D091AEF97D10071A7EC /* Build configuration list for PBXNativeTarget "QHSpeechSynthesizerQueueTests" */;
+			buildPhases = (
+				EC1F1CF81AEF97D10071A7EC /* Sources */,
+				EC1F1CF91AEF97D10071A7EC /* Frameworks */,
+				EC1F1CFA1AEF97D10071A7EC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EC1F1CFE1AEF97D10071A7EC /* PBXTargetDependency */,
+			);
+			name = QHSpeechSynthesizerQueueTests;
+			productName = QHSpeechSynthesizerQueueTests;
+			productReference = EC1F1CFC1AEF97D10071A7EC /* QHSpeechSynthesizerQueueTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EC1F1CDB1AEF97D10071A7EC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = SQuatsoft;
+				TargetAttributes = {
+					EC1F1CE21AEF97D10071A7EC = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
+					EC1F1CFB1AEF97D10071A7EC = {
+						CreatedOnToolsVersion = 6.3.1;
+						TestTargetID = EC1F1CE21AEF97D10071A7EC;
+					};
+				};
+			};
+			buildConfigurationList = EC1F1CDE1AEF97D10071A7EC /* Build configuration list for PBXProject "QHSpeechSynthesizerQueue" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EC1F1CDA1AEF97D10071A7EC;
+			productRefGroup = EC1F1CE41AEF97D10071A7EC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EC1F1CE21AEF97D10071A7EC /* QHSpeechSynthesizerQueue */,
+				EC1F1CFB1AEF97D10071A7EC /* QHSpeechSynthesizerQueueTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EC1F1CE11AEF97D10071A7EC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC1F1D101AEF980B0071A7EC /* Main.storyboard in Resources */,
+				EC1F1CF71AEF97D10071A7EC /* LaunchScreen.xib in Resources */,
+				EC1F1CF41AEF97D10071A7EC /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC1F1CFA1AEF97D10071A7EC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EC1F1CDF1AEF97D10071A7EC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC1F1D0F1AEF980B0071A7EC /* ViewController.m in Sources */,
+				EC1F1CEC1AEF97D10071A7EC /* AppDelegate.m in Sources */,
+				EC1F1CE91AEF97D10071A7EC /* main.m in Sources */,
+				EC1F1D131AEF984C0071A7EC /* QHSpeechSynthesizerQueue.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC1F1CF81AEF97D10071A7EC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC1F1D031AEF97D10071A7EC /* QHSpeechSynthesizerQueueTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EC1F1CFE1AEF97D10071A7EC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EC1F1CE21AEF97D10071A7EC /* QHSpeechSynthesizerQueue */;
+			targetProxy = EC1F1CFD1AEF97D10071A7EC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EC1F1CF51AEF97D10071A7EC /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EC1F1CF61AEF97D10071A7EC /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EC1F1D041AEF97D10071A7EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		EC1F1D051AEF97D10071A7EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EC1F1D071AEF97D10071A7EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = QHSpeechSynthesizerQueue/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EC1F1D081AEF97D10071A7EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = QHSpeechSynthesizerQueue/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		EC1F1D0A1AEF97D10071A7EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = QHSpeechSynthesizerQueueTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QHSpeechSynthesizerQueue.app/QHSpeechSynthesizerQueue";
+			};
+			name = Debug;
+		};
+		EC1F1D0B1AEF97D10071A7EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = QHSpeechSynthesizerQueueTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QHSpeechSynthesizerQueue.app/QHSpeechSynthesizerQueue";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EC1F1CDE1AEF97D10071A7EC /* Build configuration list for PBXProject "QHSpeechSynthesizerQueue" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC1F1D041AEF97D10071A7EC /* Debug */,
+				EC1F1D051AEF97D10071A7EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC1F1D061AEF97D10071A7EC /* Build configuration list for PBXNativeTarget "QHSpeechSynthesizerQueue" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC1F1D071AEF97D10071A7EC /* Debug */,
+				EC1F1D081AEF97D10071A7EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		EC1F1D091AEF97D10071A7EC /* Build configuration list for PBXNativeTarget "QHSpeechSynthesizerQueueTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC1F1D0A1AEF97D10071A7EC /* Debug */,
+				EC1F1D0B1AEF97D10071A7EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EC1F1CDB1AEF97D10071A7EC /* Project object */;
+}

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XfC-g7-IcH">
+                                <rect key="frame" x="62" y="103" width="477" height="69"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cLs-CB-kvK">
+                                <rect key="frame" x="62" y="66" width="70" height="30"/>
+                                <state key="normal" title="Read Last">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="readLast:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="SQr-y6-Imo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cgU-2L-9T1">
+                                <rect key="frame" x="62" y="104" width="73" height="30"/>
+                                <state key="normal" title="Read Next">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="readNext:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="QrG-zZ-bhM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="65s-2C-KVX">
+                                <rect key="frame" x="62" y="142" width="124" height="30"/>
+                                <state key="normal" title="Read Immediately">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="readImmediately:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="jgF-3K-CN2"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Welcome !" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3WW-TX-TlJ">
+                                <rect key="frame" x="62" y="28" width="477" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wqo-Ko-JCz">
+                                <rect key="frame" x="490" y="103" width="51" height="31"/>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clear queue" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kne-pR-SCO">
+                                <rect key="frame" x="380" y="108" width="93" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cgU-2L-9T1" firstAttribute="top" secondItem="cLs-CB-kvK" secondAttribute="bottom" constant="8" id="22m-Lf-KXN"/>
+                            <constraint firstItem="wqo-Ko-JCz" firstAttribute="centerY" secondItem="cgU-2L-9T1" secondAttribute="centerY" id="3VP-cC-hKb"/>
+                            <constraint firstAttribute="centerY" secondItem="3WW-TX-TlJ" secondAttribute="centerY" constant="257" id="42H-S4-hn8"/>
+                            <constraint firstItem="cLs-CB-kvK" firstAttribute="centerX" secondItem="cgU-2L-9T1" secondAttribute="centerX" id="6K9-9U-PAc"/>
+                            <constraint firstItem="XfC-g7-IcH" firstAttribute="bottom" secondItem="65s-2C-KVX" secondAttribute="bottom" id="AMf-jL-6B2"/>
+                            <constraint firstItem="cLs-CB-kvK" firstAttribute="top" secondItem="3WW-TX-TlJ" secondAttribute="bottom" constant="8" id="FWJ-O2-BkH"/>
+                            <constraint firstItem="cLs-CB-kvK" firstAttribute="leading" secondItem="3WW-TX-TlJ" secondAttribute="leading" id="GhL-Mw-E6Q"/>
+                            <constraint firstItem="cLs-CB-kvK" firstAttribute="leading" secondItem="cgU-2L-9T1" secondAttribute="leading" id="KZp-79-GR0"/>
+                            <constraint firstItem="XfC-g7-IcH" firstAttribute="leading" secondItem="cgU-2L-9T1" secondAttribute="leading" id="R2p-GR-wZ9"/>
+                            <constraint firstItem="XfC-g7-IcH" firstAttribute="trailing" secondItem="wqo-Ko-JCz" secondAttribute="trailing" id="Tua-OP-i2N"/>
+                            <constraint firstItem="3WW-TX-TlJ" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="46" id="Ygs-r3-bKY"/>
+                            <constraint firstItem="wqo-Ko-JCz" firstAttribute="trailing" secondItem="3WW-TX-TlJ" secondAttribute="trailing" id="a1S-N1-qHV"/>
+                            <constraint firstItem="3WW-TX-TlJ" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" id="cDe-vP-BA9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3WW-TX-TlJ" secondAttribute="trailing" constant="45" id="cbb-af-671"/>
+                            <constraint firstItem="XfC-g7-IcH" firstAttribute="top" secondItem="cgU-2L-9T1" secondAttribute="top" constant="-1" id="eoX-YR-2QB"/>
+                            <constraint firstItem="wqo-Ko-JCz" firstAttribute="centerY" secondItem="Kne-pR-SCO" secondAttribute="centerY" id="isy-6D-6QW"/>
+                            <constraint firstItem="cLs-CB-kvK" firstAttribute="centerX" secondItem="3WW-TX-TlJ" secondAttribute="centerX" id="jlK-mo-0GK"/>
+                            <constraint firstItem="wqo-Ko-JCz" firstAttribute="leading" secondItem="Kne-pR-SCO" secondAttribute="trailing" constant="17" id="kof-0q-YI8"/>
+                            <constraint firstItem="65s-2C-KVX" firstAttribute="leading" secondItem="cgU-2L-9T1" secondAttribute="leading" id="mfA-hz-isj"/>
+                            <constraint firstItem="65s-2C-KVX" firstAttribute="top" secondItem="cgU-2L-9T1" secondAttribute="bottom" constant="8" id="ttX-YI-om3"/>
+                            <constraint firstItem="65s-2C-KVX" firstAttribute="centerX" secondItem="cgU-2L-9T1" secondAttribute="centerX" id="uqq-2G-wba"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="42H-S4-hn8"/>
+                                <exclude reference="6K9-9U-PAc"/>
+                                <exclude reference="jlK-mo-0GK"/>
+                                <exclude reference="uqq-2G-wba"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="clearQueueSwitch" destination="wqo-Ko-JCz" id="d6s-du-yI9"/>
+                        <outlet property="textField" destination="3WW-TX-TlJ" id="UvN-C5-Eb8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
