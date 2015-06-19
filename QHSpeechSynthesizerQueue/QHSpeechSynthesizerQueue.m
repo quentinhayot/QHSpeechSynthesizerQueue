@@ -12,17 +12,17 @@
 
 
 -(instancetype)init{
-    QHSpeechSynthesizerQueue *queueInstance = [super init];
-    if (queueInstance){
-        queueInstance->_queue = [[NSMutableArray alloc] init];
-        queueInstance->_synthesizer = [[AVSpeechSynthesizer alloc] init];
-        [queueInstance->_synthesizer setDelegate:self];
+    self = [super init];
+    if (self){
+        self->_queue = [[NSMutableArray alloc] init];
+        self->_synthesizer = [[AVSpeechSynthesizer alloc] init];
+        [self->_synthesizer setDelegate:self];
         _play = true;
-        queueInstance->_audioSession = [AVAudioSession sharedInstance];
+        self->_audioSession = [AVAudioSession sharedInstance];
         [_audioSession setActive:YES error:nil];
         self.duckOthers = YES;
     }
-    return queueInstance;
+    return self;
 }
 
 -(void)readLast:(NSString*)message withLanguage:(NSString*)language andRate:(float)rate{
