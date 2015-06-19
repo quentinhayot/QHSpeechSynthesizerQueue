@@ -20,8 +20,7 @@
         _play = true;
         queueInstance->_audioSession = [AVAudioSession sharedInstance];
         [_audioSession setActive:YES error:nil];
-        [_audioSession setCategory:AVAudioSessionCategoryPlayback
-                       withOptions:AVAudioSessionCategoryOptionDuckOthers error:nil];
+        self.duckOthers = YES;
     }
     return queueInstance;
 }

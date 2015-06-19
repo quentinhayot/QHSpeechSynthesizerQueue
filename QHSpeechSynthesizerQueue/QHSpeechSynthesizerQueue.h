@@ -35,7 +35,7 @@
 @property(nonatomic) NSTimeInterval postDelay;
 
 /*!
- * @brief Set this to YES to duck all the device's audio sessions when a string is being read.
+ * @brief Set this to YES to duck all the device's audio sessions when a string is being read. Defaults to YES.
  */
 @property(nonatomic) BOOL duckOthers;
 
