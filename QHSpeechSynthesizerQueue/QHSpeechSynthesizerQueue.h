@@ -22,16 +22,22 @@
  */
 @interface QHSpeechSynthesizerQueue : NSObject <AVSpeechSynthesizerDelegate>
 {
-    @protected
-    NSMutableArray *queue;
-    AVSpeechSynthesizer *synthesizer;
-    BOOL play;
+@protected
+    NSMutableArray *_queue;
+    AVSpeechSynthesizer *_synthesizer;
+    BOOL _play;
+    AVAudioSession *_audioSession;
     
 }
 
 @property(nonatomic, assign) id<QHSpeechSynthesizerQueueDelegate> delegate;
 @property(nonatomic) NSTimeInterval preDelay;
 @property(nonatomic) NSTimeInterval postDelay;
+
+/*!
+ * @brief Set this to YES to duck all the device's audio sessions when a string is being read.
+ */
+@property(nonatomic) BOOL duckOthers;
 
 /*!
  @abstract      Add a string to read at the end of the queue.

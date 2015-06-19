@@ -14,17 +14,21 @@
 -(instancetype)init{
     QHSpeechSynthesizerQueue *queueInstance = [super init];
     if (queueInstance){
-        queueInstance->queue = [[NSMutableArray alloc] init];
-        queueInstance->synthesizer = [[AVSpeechSynthesizer alloc] init];
-        [queueInstance->synthesizer setDelegate:self];
-        play = true;
+        queueInstance->_queue = [[NSMutableArray alloc] init];
+        queueInstance->_synthesizer = [[AVSpeechSynthesizer alloc] init];
+        [queueInstance->_synthesizer setDelegate:self];
+        _play = true;
+        queueInstance->_audioSession = [AVAudioSession sharedInstance];
+        [_audioSession setActive:YES error:nil];
+        [_audioSession setCategory:AVAudioSessionCategoryPlayback
+                       withOptions:AVAudioSessionCategoryOptionDuckOthers error:nil];
     }
     return queueInstance;
 }
 
 -(void)readLast:(NSString*)message withLanguage:(NSString*)language andRate:(float)rate{
     AVSpeechUtterance *utterance = [self createUtteranceWithString:message andLanguage:language andRate:rate];
-    [queue addObject:utterance];
+    [_queue addObject:utterance];
     [self next];
 }
 
@@ -32,26 +36,36 @@
     if (clearQueue)
         [self clearQueue];
     AVSpeechUtterance *utterance = [self createUtteranceWithString:message andLanguage:language andRate:rate];
-    [queue insertObject:utterance atIndex:0];
+    [_queue insertObject:utterance atIndex:0];
     [self next];
 }
 
 -(void)readImmediately:(NSString*)message withLanguage:(NSString*)language andRate:(float)rate andClearQueue:(BOOL)clearQueue{
     if (clearQueue)
         [self clearQueue];
-    [synthesizer stopSpeakingAtBoundary:AVSpeechBoundaryImmediate];
+    [_synthesizer stopSpeakingAtBoundary:AVSpeechBoundaryImmediate];
     AVSpeechUtterance *utterance = [self createUtteranceWithString:message andLanguage:language andRate:rate];
-    [queue insertObject:utterance atIndex:0];
+    [_queue insertObject:utterance atIndex:0];
     [self next];
     
 }
 
+-(void)setDuckOthers:(BOOL)duck{
+    _duckOthers = duck;
+    if (duck)
+        [_audioSession setCategory:AVAudioSessionCategoryPlayback
+                       withOptions:AVAudioSessionCategoryOptionDuckOthers error:nil];
+    else
+        [_audioSession setCategory:AVAudioSessionCategoryPlayback
+                       withOptions:AVAudioSessionCategoryOptionMixWithOthers error:nil];
+}
+
 #pragma mark Internal
 -(void)next{
-    if (play && [queue count] > 0 && ![synthesizer isSpeaking]){
-        AVSpeechUtterance *utterance = [queue firstObject];
-        [queue removeObjectAtIndex:0];
-        [synthesizer speakUtterance:utterance];
+    if (_play && [_queue count] > 0 && ![_synthesizer isSpeaking]){
+        AVSpeechUtterance *utterance = [_queue firstObject];
+        [_queue removeObjectAtIndex:0];
+        [_synthesizer speakUtterance:utterance];
     }
 }
 
@@ -66,33 +80,33 @@
 
 #pragma mark Controls
 -(void)resume{
-    play = true;
-    if (![synthesizer continueSpeaking])
+    _play = true;
+    if (![_synthesizer continueSpeaking])
         [self next];
 }
 
 -(void)pause{
-    [synthesizer pauseSpeakingAtBoundary:AVSpeechBoundaryImmediate];
-    play = false;
+    [_synthesizer pauseSpeakingAtBoundary:AVSpeechBoundaryImmediate];
+    _play = false;
 }
 
 -(void)pauseAfterCurrent{
-    play = false;
+    _play = false;
 }
 
 -(void)stop{
-    [synthesizer stopSpeakingAtBoundary:AVSpeechBoundaryImmediate];
-    play = false;
+    [_synthesizer stopSpeakingAtBoundary:AVSpeechBoundaryImmediate];
+    _play = false;
     [self clearQueue];
 }
 
 -(void)stopAfterCurrent{
-    play = false;
+    _play = false;
     [self clearQueue];
 }
 
 -(void)clearQueue{
-    [queue removeAllObjects];
+    [_queue removeAllObjects];
 }
 
 #pragma mark AVSpeechSynthesizerDelegate Protocol
@@ -113,6 +127,7 @@
 }
 
 - (void)speechSynthesizer:(AVSpeechSynthesizer *)synthesizer willSpeakRangeOfSpeechString:(NSRange)characterRange utterance:(AVSpeechUtterance *)utterance{
+    
     [self.delegate speechSynthesizerQueueWillStartTalking:self];
     
 }
