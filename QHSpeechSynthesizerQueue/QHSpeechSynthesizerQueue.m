@@ -110,28 +110,33 @@
 
 #pragma mark AVSpeechSynthesizerDelegate Protocol
 - (void)speechSynthesizer:(AVSpeechSynthesizer *)synthesizer didStartSpeechUtterance:(AVSpeechUtterance *)utterance{
-    [self.delegate speechSynthesizerQueueDidStartTalking:self];
+    if ([self.delegate respondsToSelector:@selector(speechSynthesizerQueueDidStartTalking:)])
+        [self.delegate speechSynthesizerQueueDidStartTalking:self];
 }
 - (void)speechSynthesizer:(AVSpeechSynthesizer *)synthesizer didPauseSpeechUtterance:(AVSpeechUtterance *)utterance{
-    [self.delegate speechSynthesizerQueueDidPauseTalking:self];
+    if ([self.delegate respondsToSelector:@selector(speechSynthesizerQueueDidPauseTalking:)])
+        [self.delegate speechSynthesizerQueueDidPauseTalking:self];
     
 }
 - (void)speechSynthesizer:(AVSpeechSynthesizer *)synthesizer didContinueSpeechUtterance:(AVSpeechUtterance *)utterance{
-    [self.delegate speechSynthesizerQueueDidContinueTalking:self];
+    if ([self.delegate respondsToSelector:@selector(speechSynthesizerQueueDidContinueTalking:)])
+        [self.delegate speechSynthesizerQueueDidContinueTalking:self];
     
 }
 - (void)speechSynthesizer:(AVSpeechSynthesizer *)synthesizer didCancelSpeechUtterance:(AVSpeechUtterance *)utterance{
-    [self.delegate speechSynthesizerQueueDidCancelTalking:self];
+    if ([self.delegate respondsToSelector:@selector(speechSynthesizerQueueDidCancelTalking:)])
+        [self.delegate speechSynthesizerQueueDidCancelTalking:self];
     
 }
 
 - (void)speechSynthesizer:(AVSpeechSynthesizer *)synthesizer willSpeakRangeOfSpeechString:(NSRange)characterRange utterance:(AVSpeechUtterance *)utterance{
-    
-    [self.delegate speechSynthesizerQueueWillStartTalking:self];
+    if ([self.delegate respondsToSelector:@selector(speechSynthesizerQueueWillStartTalking:)])
+        [self.delegate speechSynthesizerQueueWillStartTalking:self];
     
 }
 -(void)speechSynthesizer:(AVSpeechSynthesizer *)synthesizer didFinishSpeechUtterance:(AVSpeechUtterance *)utterance{
-    [self.delegate speechSynthesizerQueueDidFinishTalking:self];
+    if ([self.delegate respondsToSelector:@selector(speechSynthesizerQueueDidFinishTalking:)])
+        [self.delegate speechSynthesizerQueueDidFinishTalking:self];
     [self next];
 }
 
