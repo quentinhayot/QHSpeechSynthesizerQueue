@@ -31,7 +31,15 @@
 }
 
 @property(nonatomic, assign) id<QHSpeechSynthesizerQueueDelegate> delegate;
+
+/*!
+ * @brief The delay before reading a message. Default is 0.0
+ */
 @property(nonatomic) NSTimeInterval preDelay;
+
+/*!
+ * @brief The delay after reading a message. Default is 0.0
+ */
 @property(nonatomic) NSTimeInterval postDelay;
 
 /*!
@@ -129,20 +137,6 @@
  -
  */
 -(void)clearQueue;
-
-/*!
- @abstract      Set the delay before reading a message. Default is 0.0
- @discussion
- -
- */
--(void)setPreDelay:(NSTimeInterval)timeInterval;
-
-/*!
- @abstract      Set the delay to wait after reading a message before reading another. Default is 0.0
- @discussion
- -
- */
--(void)setPostDelay:(NSTimeInterval)timeInterval;
 
 @end
 
