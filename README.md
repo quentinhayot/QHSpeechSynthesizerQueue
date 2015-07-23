@@ -91,10 +91,15 @@ syntesizerQueue.postDelay = 1.0;
 #### Delegate
 You can set a `QHSpeechSynthesizerQueueDelegate` to be notified of playback events.
 ```objective-c
+@protocol QHSpeechSynthesizerQueueDelegate <NSObject>
+
+@optional
 - (void)speechSynthesizerQueueDidStartTalking:(QHSpeechSynthesizerQueue *)queue;
 - (void)speechSynthesizerQueueDidFinishTalking:(QHSpeechSynthesizerQueue *)queue;
 - (void)speechSynthesizerQueueDidPauseTalking:(QHSpeechSynthesizerQueue *)queue;
 - (void)speechSynthesizerQueueDidContinueTalking:(QHSpeechSynthesizerQueue *)queue;
 - (void)speechSynthesizerQueueDidCancelTalking:(QHSpeechSynthesizerQueue *)queue;
 - (void)speechSynthesizerQueueWillStartTalking:(QHSpeechSynthesizerQueue *)queue;
+
+@end
 ```
