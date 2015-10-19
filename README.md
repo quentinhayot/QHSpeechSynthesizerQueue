@@ -1,4 +1,4 @@
-# QHSpeechSyntesizerQueue
+# QHSpeechSynthesizerQueue
 [![Build Status](https://travis-ci.org/quentinhayot/QHSpeechSynthesizerQueue.svg?branch=master)](https://travis-ci.org/quentinhayot/QHSpeechSynthesizerQueue)  
 Queue management system for AVSpeechSynthesizer
 
@@ -6,22 +6,22 @@ Queue management system for AVSpeechSynthesizer
 ### Cocoapods
 Add this to your Podfile:  
 ```objective-c
-pod 'QHSpeechSyntesizerQueue'
+pod 'QHSpeechSynthesizerQueue'
 ```
 Run a `pod install` and import the header where you need it:  
 ```objective-c
-#import <QHSpeechSyntesizerQueue.h>
+#import <QHSpeechSynthesizerQueue.h>
 ```
 ### Manually
-Drop QHSpeechSyntesizerQueue.h and QHSpeechSyntesizerQueue.m in your project, then  
+Drop QHSpeechSynthesizerQueue.h and QHSpeechSynthesizerQueue.m in your project, then  
 ```objective-c
-#import "QHSpeechSyntesizerQueue.h"
+#import "QHSpeechSynthesizerQueue.h"
 ```
 
 ##Usage
 #### Initialization
 ```objective-c
-QHSpeechSyntesizerQueue *syntesizerQueue = [[QHSpeechSyntesizerQueue alloc] init];
+QHSpeechSynthesizerQueue *syntesizerQueue = [[QHSpeechSynthesizerQueue alloc] init];
 ```
 #### Adding messages to the queue
 ##### Add a message at the end of the queue
