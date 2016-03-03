@@ -21,21 +21,21 @@ Drop QHSpeechSynthesizerQueue.h and QHSpeechSynthesizerQueue.m in your project, 
 ##Usage
 #### Initialization
 ```objective-c
-QHSpeechSynthesizerQueue *syntesizerQueue = [[QHSpeechSynthesizerQueue alloc] init];
+QHSpeechSynthesizerQueue *synthesizerQueue = [[QHSpeechSynthesizerQueue alloc] init];
 ```
 #### Adding messages to the queue
 ##### Add a message at the end of the queue
 ```objective-c
-[syntesizerQueue readLast:@"This message will be added to the end of the queue" withLanguage:@"en_US" andRate:@"0.2"];
+[synthesizerQueue readLast:@"This message will be added to the end of the queue" withLanguage:@"en_US" andRate:@"0.2"];
 ```
 ##### Insert a message to be read immediatly after the current message being read
 ```objective-c
-[syntesizerQueue readNext:@"This message will be read next" withLanguage:@"en_US" andRate:@"0.2" andClearQueue:NO];
+[synthesizerQueue readNext:@"This message will be read next" withLanguage:@"en_US" andRate:@"0.2" andClearQueue:NO];
 ```
 If you set `andClearQueue:` to `YES`, the queue will be cleared and this will be the last message to be read.
 ##### Interrupt the current message and read this one immediately
 ```objective-c
-[syntesizerQueue readImmediately:@"This message will be read next" withLanguage:@"en_US" andRate:@"0.2" andClearQueue:NO];
+[synthesizerQueue readImmediately:@"This message will be read next" withLanguage:@"en_US" andRate:@"0.2" andClearQueue:NO];
 ```
 If you set `andClearQueue:` to `YES`, the queue will be cleared and this will be the last message to be read.
 
@@ -43,49 +43,49 @@ If you set `andClearQueue:` to `YES`, the queue will be cleared and this will be
 ##### Stop
 Stop the queue's playback and clear the queue immediately.
 ```objective-c
-[syntesizerQueue stop];
+[synthesizerQueue stop];
 ```
 ##### Stop after current
 Stop the queue's playback and clear the queue. If something is currently being read, it will stop afterwards.
 ```objective-c
-[syntesizerQueue stopAfterCurrent];
+[synthesizerQueue stopAfterCurrent];
 ```
 ##### Pause
 Pause the queue's playback immediately.
 ```objective-c
-[syntesizerQueue pause];
+[synthesizerQueue pause];
 ```
 ##### Pause after current
 Pause the queue's playback. If something is currently being read, it will pause afterwards.
 ```objective-c
-[syntesizerQueue pauseAfterCurrent];
+[synthesizerQueue pauseAfterCurrent];
 ```
 ##### Resume
 Resume the queue's playback.
 ```objective-c
-[syntesizerQueue resume];
+[synthesizerQueue resume];
 ```
 ##### Clear queue
 Clear the queue. If something is being read, it will not be interupted and future added messages will be read if not paused/stopped.
 ```objective-c
-[syntesizerQueue clearQueue];
+[synthesizerQueue clearQueue];
 ```
 
 #### Properties
 ##### BOOL duckOthers
 Set this to YES to duck all the device's audio sessions when a string is being read. Defaults to YES.
 ```objective-c
-syntesizerQueue.duckOthers = YES;
+synthesizerQueue.duckOthers = YES;
 ```
 ##### NSTimeInterval preDelay
 The delay before reading a message. Default is 0.0
 ```objective-c
-syntesizerQueue.preDelay = 1.0;
+synthesizerQueue.preDelay = 1.0;
 ```
 ##### NSTimeInterval postDelay
 The delay after reading a message. Default is 0.0
 ```objective-c
-syntesizerQueue.postDelay = 1.0;
+synthesizerQueue.postDelay = 1.0;
 ```
 
 #### Delegate
