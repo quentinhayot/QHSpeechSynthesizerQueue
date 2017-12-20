@@ -26,16 +26,24 @@ QHSpeechSynthesizerQueue *synthesizerQueue = [[QHSpeechSynthesizerQueue alloc] i
 #### Adding messages to the queue
 ##### Add a message at the end of the queue
 ```objective-c
-[synthesizerQueue readLast:@"This message will be added to the end of the queue" withLanguage:@"en_US" andRate:@"0.2"];
+[synthesizerQueue readLast:@"This message will be added to the end of the queue" 
+                  withLanguage:@"en_US"
+                  andRate:@"0.2"];
 ```
 ##### Insert a message to be read immediatly after the current message being read
 ```objective-c
-[synthesizerQueue readNext:@"This message will be read next" withLanguage:@"en_US" andRate:@"0.2" andClearQueue:NO];
+[synthesizerQueue readNext:@"This message will be read next"
+                  withLanguage:@"en_US"
+                  andRate:@"0.2"
+                  andClearQueue:NO];
 ```
 If you set `andClearQueue:` to `YES`, the queue will be cleared and this will be the last message to be read.
 ##### Interrupt the current message and read this one immediately
 ```objective-c
-[synthesizerQueue readImmediately:@"This message will be read next" withLanguage:@"en_US" andRate:@"0.2" andClearQueue:NO];
+[synthesizerQueue readImmediately:@"This message will be read next"
+                  withLanguage:@"en_US"
+                  andRate:@"0.2"
+                  andClearQueue:NO];
 ```
 If you set `andClearQueue:` to `YES`, the queue will be cleared and this will be the last message to be read.
 
